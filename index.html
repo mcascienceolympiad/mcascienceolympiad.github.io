@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,51 +15,284 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
     <style>
-        html{
+        html {
             color-scheme: dark;
+            scroll-behavior: smooth;
         }
-        body{
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        body {
             font-family: Poppins, Arial, Helvetica, sans-serif;
-            font-display: swap;
         }
-        section{
+
+        section {
             padding: 2rem 0 2rem 0;
             margin-left: 1rem;
         }
-        
+
+        nav>ul {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+            padding-left: 0.5rem;
+        }
+
+        nav li {
+            text-align: center;
+            color: white;
+            padding: 0.5rem;
+            transition: background-color 400ms;
+        }
+
+        nav li:hover {
+            background-color: white;
+        }
+
+
+        nav li>a {
+            text-decoration: none;
+            color: white;
+            transition: color 400ms;
+        }
+
+        nav li:hover>a {
+            color: black;
+        }
+
+        #achievements p:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        /* Accessibility stuff */
+        .skip-to-main-content-link {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+            padding: 1em;
+            background-color: black;
+            color: white;
+            opacity: 0;
+        }
+
+        .skip-to-main-content-link:focus {
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+        }
     </style>
 </head>
+
 <body>
-    <main>
-        <section>
+    <!-- Accessibility link -->
+    <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+
+    <nav role="navigation">
+        <ul>
+            <li>
+                <a href="#what-is-scioly">What is SciOly?</a>
+            </li>
+            <li>
+                <a href="#scioly-events">2023-24 SciOly Events</a>
+            </li>
+            <li>
+                <a href="#mcaso">MCASO</a>
+            </li>
+            <li>
+                <a href="#achievements">Achievements</a>
+            </li>
+            <li>
+                <a href="#council-advisor">Council and Advisor</a>
+            </li>
+            <li>
+                <a href="#past-council">Past Council</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main">
+        <section id="what-is-scioly">
             <h2>
                 What is Science Olympiad (SciOly)?
             </h2>
+            <p>
+                Science Olympiad is a team STEM competition in which nearly 8,000 middle school and high school teams
+                compete each year.
+            </p>
+            <p>
+                We compete in Division C, the division for students in grades 9-12.
+            </p>
         </section>
         <hr>
-        <section>
+        <section id="scioly-events">
             <h2>
                 2023-24 SciOly events
             </h2>
+            <p>
+                The events for this year can be found at <a href="https://www.soinc.org/events/2024-event-table">the
+                    Science Olympiad website's event table.</a>
+            </p>
+            <p>
+                For convenience, the Division C events are also listed here (accurate as of 8/24/23)
+            </p>
+            <ul>
+                <li>
+                    Life, Personal, and Social Science:
+                    <ul>
+                        <li>
+                            <a href="https://www.soinc.org/anatomy-and-physiology-div-c-c">Anatomy and Physiology</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/disease-detectives-div-c-c">Disease Detectives</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/ecology-div-c-c">Ecology</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/forestry-div-c-c">Forestry</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/microbe-mission-div-c-c">Microbe Mission</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Earth and Space Science:
+                    <ul>
+                        <li>
+                            <a href="https://www.soinc.org/astronomy-div-c-c">Astronomy</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/dynamic-planet-div-c-c">Dynamic Planet</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/fossils-div-c-c">Fossils</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/geologic-mapping-div-c-c">Geologic Mapping</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Physical Science and Chemistry
+                    <ul>
+                        <li>
+                            <a href="https://www.soinc.org/air-trajectory-div-c-c">Air Trajectory</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/chem-lab-div-c-c">Chem Lab</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/detector-building-div-c-c">Detector Building</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/forensics-div-c-c">Forensics</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/optics-div-c-c">Optics</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/wind-power-div-c-c">Wind Power</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Technology and Engineering
+                    <ul>
+                        <li>
+                            <a href="https://www.soinc.org/flight-div-c-c">Flight</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/robot-tour-div-c-c">Robot Tour</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/scrambler-div-c-c">Scrambler</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/tower-div-c-c">Tower</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Inquiry and Nature of Science
+                    <ul>
+                        <li>
+                            <a href="https://www.soinc.org/codebusters-div-c-c">Codebusters</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/experimental-design-div-c-c">Experimental Design</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/fermi-questions-div-c-c">Fermi Questions</a>
+                        </li>
+                        <li>
+                            <a href="https://www.soinc.org/write-it-do-it-div-c-c">Write It Do It</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </section>
         <hr>
-        <section>
+        <section id="mcaso">
             <h2>MCASO</h2>
+            <p>
+                MCASO is a virtual competition hosted via Scilympiad on the November 18, 2023 (11/18/23).
+            </p>
         </section>
         <hr>
-        <section>
+        <section id="achievements">
             <h2>
                 Our achievements
             </h2>
             <p>
-                6th place team in 2022 NJ Science Olympiad State Tournament, 5th place team in 2021 NJ Science Olympiad State Tournament
+                6th place team at the 2022 NJ Science Olympiad State Tournament
+                <br>
+                Medals in 6 events: Chem Lab, Codebusters, Detector Building, Dynamic Planet, Ornithology, and Remote
+                Sensing
             </p>
             <p>
-                2nd place team in 2022 CMU Science Olympiad Invitational with over 10 medals, including multiple gold medals
+                5th place team at the 2021 NJ Science Olympiad State Tournament.
+                <br>
+                Medals in 9 events: Chem Lab, Circuit Lab, Codebusters, Designer Genes, Experimental Design, Forensics,
+                Machines, Protein Modeling, and Sounds of Music
             </p>
+            <p>
+                2nd place team at the 2022 CMU Science Olympiad Invitational
+                <br>
+                Medals in 16 events (including 11 Gold medals!):
+            <ul>
+                <li>1st in Cell Biology</li>
+                <li>1st in Chem Lab</li>
+                <li>1st in CodeBusters</li>
+                <li>1st in Detector Building</li>
+                <li>1st in Disease Detectives</li>
+                <li>1st in Forensics</li>
+                <li>1st in Green Generation</li>
+                <li>1st in Its About Time</li>
+                <li>1st in Ornithology</li>
+                <li>1st in Remote Sensing</li>
+                <li>1st in Wifi Lab</li>
+                <li>2nd in Anatomy & Physiology </li>
+                <li>2nd in Astronomy</li>
+                <li>2nd in Environmental Chemistry</li>
+                <li>2nd in Trajectory</li>
+                <li>4th in Dynamic Planet</li>
+            </ul>
+            </p>
+            <p>
+                9th place team at the 2021 Harvard-Brown Invitational
+            </p>
+            <p>
+                Top 10 in Astronomy, Chemistry Lab, Codebusters, Environmental Chemistry, and Remote Sensing at the 2022
+                UPenn Science Olympiad Invitational
+            </p>
+
         </section>
         <hr>
-        <section>
+        <section id="council-advisor">
             <h2>
                 Council and our advisor
             </h2>
@@ -74,6 +308,19 @@
                 <li>Harinarayan AsooriSriram - Event Director for MCASO</li>
             </ul>
         </section>
+        <hr>
+        <section id="past-council">
+            <h2>
+                Past council
+            </h2>
+            <p>
+                2023 Captains - Abhay Bhaskar, Adrija Kundu, Uday Vidyadharan, Jason Liu, and Sanjana Bandi
+            </p>
+            <p>
+                2022 Captains - Adrija Kundu, Aditya Shelke, Anuraag Sarkar, and Niranjan Deepak
+            </p>
+        </section>
     </main>
 </body>
+
 </html>
