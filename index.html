@@ -2,325 +2,494 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MCA Science Olympiad Website">
+    <title> Edison Academy Magnet School Science Olympiad </title>
+    <meta charset="utf-8">
 
-    <title>MCA Science Olympiad</title>
-
+    <meta name="title" content="Science Olympiad Website Template">
+    <meta name="description" content="My Site Description Lorem Ipsum Dolor Sit Amet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="carousel.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-    <style>
-        html {
-            color-scheme: dark;
-            scroll-behavior: smooth;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-        }
-
-        body {
-            font-family: Poppins, Arial, Helvetica, sans-serif;
-        }
-
-        section {
-            padding: 2rem 0 2rem 0;
-            margin-left: 1rem;
-        }
-
-        nav>ul {
-            list-style-type: none;
-            display: flex;
-            gap: 1rem;
-            padding-left: 0.5rem;
-        }
-
-        nav li {
-            text-align: center;
-            color: white;
-            padding: 0.5rem;
-            transition: background-color 400ms;
-        }
-
-        nav li:hover {
-            background-color: white;
-        }
-
-
-        nav li>a {
-            text-decoration: none;
-            color: white;
-            transition: color 400ms;
-        }
-
-        nav li:hover>a {
-            color: black;
-        }
-
-        #achievements p:not(:last-child) {
-            margin-bottom: 2rem;
-        }
-
-        /* Accessibility stuff */
-        .skip-to-main-content-link {
-            position: absolute;
-            left: -9999px;
-            z-index: 999;
-            padding: 1em;
-            background-color: black;
-            color: white;
-            opacity: 0;
-        }
-
-        .skip-to-main-content-link:focus {
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 1;
-        }
-    </style>
+    <script src="https://use.fontawesome.com/c3dc2f3a63.js" defer></script>
+    <script src="carousel.js" defer></script>
 </head>
 
 <body>
-    <!-- Accessibility link -->
-    <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+    <h1 style="text-align: center;">
+        <!-- A little awkward to read here but forces line break between these two to be preferred -->
+        <span style="display: inline-block;">Edison Academy Magnet School
+        </span> <span style="display: inline-block;">
+            Science Olympiad </span>
+    </h1>
 
-    <nav role="navigation">
+    <div class="carousel__holder">
+        <div class="carousel">
+
+            <input class="carousel__activator" type="radio" name="carousel" id="a" checked="checked" />
+
+            <input class="carousel__activator" type="radio" name="carousel" id="b" />
+
+            <input class="carousel__activator" type="radio" name="carousel" id="c" />
+
+            <input class="carousel__activator" type="radio" name="carousel" id="d" />
+
+            <input class="carousel__activator" type="radio" name="carousel" id="e" />
+
+            <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="e"></label>
+                <label class="carousel__control carousel__control--forward" for="b"></label>
+            </div>
+
+            <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="a"></label>
+                <label class="carousel__control carousel__control--forward" for="c"></label>
+            </div>
+
+            <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="b"></label>
+                <label class="carousel__control carousel__control--forward" for="d"></label>
+            </div>
+
+            <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="c"></label>
+                <label class="carousel__control carousel__control--forward" for="e"></label>
+            </div>
+
+            <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="d"></label>
+                <label class="carousel__control carousel__control--forward" for="a"></label>
+            </div>
+
+            <div class="carousel__track">
+                <!-- When adding more, modify the lines around line 229 in carousel.css which are like:
+                .carousel__track .carousel__slide:nth-of-type(1)
+                -->
+                <ul>
+
+                    <li class="carousel__slide"
+                        style="background-image: url('{{ site.baseurl }}/uploads/slider/Logo.jpeg');"></li>
+
+                    <li class="carousel__slide"
+                        style="background-image: url('{{ site.baseurl }}/uploads/slider/ELG.jpeg');"></li>
+
+                    <li class="carousel__slide"
+                        style="background-image: url('{{ site.baseurl }}/uploads/slider/Team.jpeg');"></li>
+
+                    <li class="carousel__slide"
+                        style="background-image: url('{{ site.baseurl }}/uploads/slider/Trophy.jpeg');"></li>
+
+                    <li class="carousel__slide"
+                        style="background-image: url('{{ site.baseurl }}/uploads/slider/study.jpg');"></li>
+
+                </ul>
+            </div>
+            <div class="carousel__indicators">
+
+                <label class="carousel__indicator" for="a"></label>
+
+                <label class="carousel__indicator" for="b"></label>
+
+                <label class="carousel__indicator" for="c"></label>
+
+                <label class="carousel__indicator" for="d"></label>
+
+                <label class="carousel__indicator" for="e"></label>
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- <p><strong>Write a notice here</strong></p> -->
+    <p>
+        <strong>Please contact <a href="mailto:sciolymca@gmail.com">sciolymca@gmail.com</a> if you have any questions.</strong>
+    </p>
+    <!-- <h2>Latest News</h2>
+    <hr />
+
+    <h4>Latest Post</h4>
+
+    <h4>Recent Posts</h4> 
+
+    <p style="text-align: right;"><a href="/SciOly-Website-Template/pages">
+            See more news </a></p>
+
+    -->
+
+    <h2> What is Science Olympiad? </h2>
+    <hr />
+
+    <p>
+        Science Olympiad is a team STEM competition in which nearly 8,000 middle school and high school teams compete each year.
+        There are 23 different events pertaining to various fields of science, including 
+        earth science, biology, chemistry, physics, and engineering.
+        Events come in three basic categories: build, test, and lab and are generally done with one or more partners.
+
+        <br><br>
+
+        In the past, our team has participated in invitational competitions at universities such as MIT, Harvard,
+        Columbia, Princeton, Cornell, Brown, and many others. 
+        In addition, our team is regularly competitive at the regional and state levels!
+
+        <br><br>
+
+        We compete in Division C, the division for students from 9-12.
+    </p>
+
+    <h2> What are our accomplishments? </h2>
+    <hr>
+    <p>
+        We placed 6th at the 2022 NJ Science Olympiad State Tournament.
+        <br>
+        We medaled in 6 events: Chem Lab, Codebusters, Detector Building, Dynamic Planet, Ornithology, and Remote
+        Sensing
+    </p>
+    <p>
+        We placed 5th at the 2021 NJ Science Olympiad State Tournament.
+        <br>
+        We medaled in 9 events: Chem Lab, Circuit Lab, Codebusters, Designer Genes, Experimental Design, Forensics,
+        Machines, Protein Modeling, and Sounds of Music
+    </p>
+    <p>
+        We placed <span style="color: #999999;">2nd</span> at the 2022 CMU Science Olympiad Invitational
+        <br>
+        We medaled in 16 events (including 11 Gold medals!):
         <ul>
-            <li>
-                <a href="#what-is-scioly">What is SciOly?</a>
-            </li>
-            <li>
-                <a href="#scioly-events">2023-24 SciOly Events</a>
-            </li>
-            <li>
-                <a href="#mcaso">MCASO</a>
-            </li>
-            <li>
-                <a href="#achievements">Achievements</a>
-            </li>
-            <li>
-                <a href="#council-advisor">Council and Advisor</a>
-            </li>
-            <li>
-                <a href="#past-council">Past Council</a>
-            </li>
+            <li><span style="color: gold;">1st</span> in Cell Biology</li>
+            <li><span style="color: gold;">1st</span> in Chem Lab</li>
+            <li><span style="color: gold;">1st</span> in CodeBusters</li>
+            <li><span style="color: gold;">1st</span> in Detector Building</li>
+            <li><span style="color: gold;">1st</span> in Disease Detectives</li>
+            <li><span style="color: gold;">1st</span> in Forensics</li>
+            <li><span style="color: gold;">1st</span> in Green Generation</li>
+            <li><span style="color: gold;">1st</span> in Its About Time</li>
+            <li><span style="color: gold;">1st</span> in Ornithology</li>
+            <li><span style="color: gold;">1st</span> in Remote Sensing</li>
+            <li><span style="color: gold;">1st</span> in Wifi Lab</li>
+            <li><span style="color: #999999;">2nd</span> in Anatomy & Physiology </li>
+            <li><span style="color: #999999;">2nd</span> in Astronomy</li>
+            <li><span style="color: #999999;">2nd</span> in Environmental Chemistry</li>
+            <li><span style="color: #999999;">2nd</span> in Trajectory</li>
+            <li>4th in Dynamic Planet</li>
         </ul>
-    </nav>
-    <main id="main">
-        <section id="what-is-scioly">
-            <h2>
-                What is Science Olympiad (SciOly)?
-            </h2>
-            <p>
-                Science Olympiad is a team STEM competition in which nearly 8,000 middle school and high school teams
-                compete each year.
-            </p>
-            <p>
-                We compete in Division C, the division for students in grades 9-12.
-            </p>
-        </section>
-        <hr>
-        <section id="scioly-events">
-            <h2>
-                2023-24 SciOly events
-            </h2>
-            <p>
-                The events for this year can be found at <a href="https://www.soinc.org/events/2024-event-table">the
-                    Science Olympiad website's event table.</a>
-            </p>
-            <p>
-                For convenience, the Division C events are also listed here (accurate as of 8/24/23)
-            </p>
-            <ul>
-                <li>
-                    Life, Personal, and Social Science:
-                    <ul>
-                        <li>
-                            <a href="https://www.soinc.org/anatomy-and-physiology-div-c-c">Anatomy and Physiology</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/disease-detectives-div-c-c">Disease Detectives</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/ecology-div-c-c">Ecology</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/forestry-div-c-c">Forestry</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/microbe-mission-div-c-c">Microbe Mission</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Earth and Space Science:
-                    <ul>
-                        <li>
-                            <a href="https://www.soinc.org/astronomy-div-c-c">Astronomy</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/dynamic-planet-div-c-c">Dynamic Planet</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/fossils-div-c-c">Fossils</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/geologic-mapping-div-c-c">Geologic Mapping</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Physical Science and Chemistry
-                    <ul>
-                        <li>
-                            <a href="https://www.soinc.org/air-trajectory-div-c-c">Air Trajectory</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/chem-lab-div-c-c">Chem Lab</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/detector-building-div-c-c">Detector Building</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/forensics-div-c-c">Forensics</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/optics-div-c-c">Optics</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/wind-power-div-c-c">Wind Power</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Technology and Engineering
-                    <ul>
-                        <li>
-                            <a href="https://www.soinc.org/flight-div-c-c">Flight</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/robot-tour-div-c-c">Robot Tour</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/scrambler-div-c-c">Scrambler</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/tower-div-c-c">Tower</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Inquiry and Nature of Science
-                    <ul>
-                        <li>
-                            <a href="https://www.soinc.org/codebusters-div-c-c">Codebusters</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/experimental-design-div-c-c">Experimental Design</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/fermi-questions-div-c-c">Fermi Questions</a>
-                        </li>
-                        <li>
-                            <a href="https://www.soinc.org/write-it-do-it-div-c-c">Write It Do It</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <hr>
-        <section id="mcaso">
-            <h2>MCASO</h2>
-            <p>
-                MCASO is a virtual competition hosted via Scilympiad on the November 18, 2023 (11/18/23).
-            </p>
-        </section>
-        <hr>
-        <section id="achievements">
-            <h2>
-                Our achievements
-            </h2>
-            <p>
-                6th place team at the 2022 NJ Science Olympiad State Tournament
-                <br>
-                Medals in 6 events: Chem Lab, Codebusters, Detector Building, Dynamic Planet, Ornithology, and Remote
-                Sensing
-            </p>
-            <p>
-                5th place team at the 2021 NJ Science Olympiad State Tournament.
-                <br>
-                Medals in 9 events: Chem Lab, Circuit Lab, Codebusters, Designer Genes, Experimental Design, Forensics,
-                Machines, Protein Modeling, and Sounds of Music
-            </p>
-            <p>
-                2nd place team at the 2022 CMU Science Olympiad Invitational
-                <br>
-                Medals in 16 events (including 11 Gold medals!):
-            <ul>
-                <li>1st in Cell Biology</li>
-                <li>1st in Chem Lab</li>
-                <li>1st in CodeBusters</li>
-                <li>1st in Detector Building</li>
-                <li>1st in Disease Detectives</li>
-                <li>1st in Forensics</li>
-                <li>1st in Green Generation</li>
-                <li>1st in Its About Time</li>
-                <li>1st in Ornithology</li>
-                <li>1st in Remote Sensing</li>
-                <li>1st in Wifi Lab</li>
-                <li>2nd in Anatomy & Physiology </li>
-                <li>2nd in Astronomy</li>
-                <li>2nd in Environmental Chemistry</li>
-                <li>2nd in Trajectory</li>
-                <li>4th in Dynamic Planet</li>
-            </ul>
-            </p>
-            <p>
-                9th place team at the 2021 Harvard-Brown Invitational
-            </p>
-            <p>
-                Top 10 in Astronomy, Chemistry Lab, Codebusters, Environmental Chemistry, and Remote Sensing at the 2022
-                UPenn Science Olympiad Invitational
-            </p>
+    </p>
+    <p>
+        We placed 9th at the 2021 Harvard-Brown Invitational
+    </p>
+    <p>
+       We were top 10 in Astronomy, Chemistry Lab, Codebusters, Environmental Chemistry, and Remote Sensing at the 2022
+        UPenn Science Olympiad Invitational
+    </p>
 
-        </section>
-        <hr>
-        <section id="council-advisor">
-            <h2>
-                Council and our advisor
-            </h2>
-            <ul>
-                <li>Dr. Weinstein - Advisor</li>
+    <!-- <h2> What are the practices like? </h2>
+    <hr />
+
+    <p>We meet every Monday from 6:00 to 8:00 P.M. Currently, all meetings are done virtually, except for build
+        meetings. Studying outside organized practices is encouraged.</p>
+
+    <h2>2020 modifications</h2>
+    <hr />
+
+    <p>This season, due to the novel Coronavirus, Science Olympiad has to make some changes. Competitions will be
+        virtual, and build events will not occur at these competitions. However, we will still practice these events as
+        part of a build team. In the list of events below, events with a strikethrough will not occur at competitions,
+        and events with an asterisk have modifications. See the emailed PowerPoint for more information. </p> -->
+
+    <h2>Events</h2>
+    <!-- begin event descriptions -->
+    <div>
+        <hr />
+        <h3> Life, Personal &amp; Social Science </h3>
+        <details>
+            <summary> Anatomy and Physiology </summary>
+            <p>
+                Participants will be assessed on their understanding of the
+                anatomy and physiology for the human Cardiovascular,
+                Lymphatic, and Excretory systems.
                 <br>
-                <li>Pranav Sitaraman - President</li>
-                <li>Abhay Bhaskar - President</li>
-                <li>Thomas Catuosco - Vice President</li>
-                <li>Sanjay Ravishankar - Vice President</li>
-                <li>Atri Bhattacharjee - Secretary</li>
-                <li>Srishti Hazra - Treasurer</li>
-                <li>Harinarayan AsooriSriram - Event Director for MCASO</li>
-            </ul>
-        </section>
-        <hr>
-        <section id="past-council">
-            <h2>
-                Past council
-            </h2>
-            <p>
-                2023 Captains - Abhay Bhaskar, Adrija Kundu, Uday Vidyadharan, Jason Liu, and Sanjana Bandi
+                <a href="https://www.soinc.org/anatomy-and-physiology-c">Link to SOINC page</a>
             </p>
+        </details>
+        <details>
+            <summary> Disease Detectives </summary>
+
             <p>
-                2022 Captains - Adrija Kundu, Aditya Shelke, Anuraag Sarkar, and Niranjan Deepak
+                Participants will use investigative skills in the scientific
+                study of disease, injury, health, and
+                disability in populations or groups of people.
+                <br>
+                <a href="https://www.soinc.org/disease-detectives-c">Link to SOINC page</a>
             </p>
-        </section>
-    </main>
+        </details>
+        <details>
+            <summary> Ecology </summary>
+
+            <p>
+                Participants will answer questions involving content
+                knowledge and process skills in the area of ecology and
+                adaptations in featured North American biomes.
+                <br>
+                <a href="https://www.soinc.org/ecology-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Forestry </summary>
+
+            <p>
+                Participants will be assessed on their general forestry
+                knowledge and the trees found in the United States that are
+                on the 2024 Official Science Olympiad National Tree List.
+                <br>
+                <a href="https://www.soinc.org/forestry-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Microbe Mission </summary>
+
+            <p>
+                Teams will answer questions, solve problems and analyze data
+                pertaining to microbes.
+                <br>
+                <a href="https://www.soinc.org/microbe-mission-c">Link to SOINC page</a>
+            </p>
+        </details>
+
+        <h3> Earth and Space Science </h3>
+        
+            <details>
+                <summary> Astronomy </summary>
+    
+                <p>
+                    Teams will demonstrate an understanding of Stellar Evolution: Star Formation & Exoplanets.
+                    <br>
+                    <a href="https://www.soinc.org/astronomy-c">Link to SOINC page</a>
+                </p>
+            </details>
+            <details>
+
+                <summary> Dynamic Planet </summary>
+
+                <p>
+                    Participants will demonstrate an understanding of the large-scale processes affecting the structure of Earth's crust.
+                    <br>
+                    <a href="https://www.soinc.org/dynamic-planet-c">Link to SOINC page</a>
+                </p>
+            </details>
+        <details>
+            <summary> Fossils </summary>
+
+            <p>
+                Teams identify and classify fossils and demonstrate their knowledge of ancient life. 
+                Tasks will be related to interpretation of past environments and ecosystems, 
+                adaptations, evolutionary relationships, and the use of fossils in dating and correlating rock units.
+                <br>
+                <a href="https://www.soinc.org/fossils-c">Link to SOINC page</a>
+            </p>
+        </details>
+       
+        <details>
+            <summary> Geologic Mapping </summary>
+
+            <p>
+                Teams will demonstrate understanding in the construction and use of topographic maps, 
+                geologic maps, and cross sections, and their use in forming interpretations regarding subsurface structures and 
+                past depositional environments on Earth and other planetary bodies.
+                <br>
+                <a href="https://www.soinc.org/geologic-mapping-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <h3> Physical Science and Chemistry </h3>
+        <details>
+            <summary> Air Trajectory </summary>
+
+            <p>
+                Prior to the competition, teams will design, construct, and calibrate a single device 
+                capable of launching projectiles onto a target and collect data regarding device parameters and performance.
+                <br>
+                <a href="https://www.soinc.org/air-trajectory-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Chem Lab </summary>
+
+            <p>
+                Teams will complete one or more tasks and answer a series of questions involving 
+                the scienctific processes of chemistry focused in the areas of Periodicity and Equilibrium.
+                <br>
+                <a href="https://www.soinc.org/chem-lab-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Detector Building </summary>
+
+            <p>
+                Teams will build a durable ORP or Redox Probe that will accurately measure and display both voltage and 
+                the concentrations of NaCl in parts per million from 0 to 5000 ppm of different water samples.
+                <br>
+                <a href="https://www.soinc.org/detector-building-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Forensics </summary>
+
+            <p>
+                Given a scenario and some possible suspects, students will perform a series of tests. 
+                These tests, along with other evidence or test results, will be used to solve a crime.
+                <br>
+                <a href="https://www.soinc.org/forensics-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Optics </summary>
+
+            <p>
+                Teams must participate in an activity involving positioning mirrors to direct a laser beam 
+                towards a target and are tested on their knowledge of geometric and physical optics.
+                <br>
+                <a href="https://www.soinc.org/optics-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Wind Power </summary>
+
+            <p>
+                Teams construct a blade assembly device prior to the tournament that is designed to capture wind power and 
+                complete a written test on the principles of alternative energy.
+                <br>
+                <a href="https://www.soinc.org/wind-power-c">Link to SOINC page</a>
+            </p>
+        </details>
+
+        <h3> Technology and Engineering </h3>
+        <details>
+            <summary> Flight </summary>
+
+            <p>
+                Prior to the tournament, teams will construct, collect data on test flights, 
+                analyze and optimize a free flight rubber-powered aircraft to achieve maximum time aloft.
+                <br>
+                <a href="https://www.soinc.org/flight-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Robot Tour </summary>
+
+            <p>
+                Teams design, build, program and test one Robotic Vehicle to  navigate a track to 
+                reach a target at a set amount of time as accurately and efficiently as possible.
+                <br>
+                <a href="https://www.soinc.org/robot-tour-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Scrambler </summary>
+
+            <p>
+                Teams design, build, and test a mechanical device, which uses the energy from a falling mass 
+                to transport an egg along a straight track as quickly as possible and stop as close to the center 
+                of a Terminal Barrier (TB) without breaking the egg.
+                <br>
+                <a href="https://www.soinc.org/scrambler-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Tower </summary>
+
+            <p>
+                Teams will design and build a Tower (Structure) meeting requirements specified in these rules 
+                to achieve the highest structural efficiency.
+                <br>
+                <a href="https://www.soinc.org/tower-c">Link to SOINC page</a>
+            </p>
+        </details>
+
+        <h3>Inquiry and Nature of Science
+        </h3>
+
+        <details>
+            <summary> Codebusters </summary>
+
+            <p>
+                Teams will cryptanalyze and decode encrypted messages using 
+                cryptanalysis techniques for historical and modern advanced ciphers.
+                <br>
+                <a href="https://www.soinc.org/codebusters-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Experimental Design </summary>
+
+            <p>
+                Participants will be tested on their ability to design, conduct, and report the findings of an experiment entirely on-site.
+                <br>
+                <a href="https://www.soinc.org/experimental-design-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Fermi Questions </summary>
+
+            <p>
+                Teams provide answers to a series of “Fermi Questions”; 
+                science related questions that seek fast, rough estimates of a quantity, which is either difficult or impossible 
+                to measure directly.
+                <br>
+                <a href="https://www.soinc.org/fermi-questions-c">Link to SOINC page</a>
+            </p>
+        </details>
+        <details>
+            <summary> Write It Do It </summary>
+
+            <p>
+                One participant will write a description of an object and how to build it. 
+                The other participant will attempt to construct the object from this description.
+                <br>
+                <a href="https://www.soinc.org/write-it-do-it-c">Link to SOINC page</a>
+            </p>
+        </details>
+    </div>
+    <p> Event descriptions from SOINC </p>
+
+    <h2>Council and our Advisor</h2>
+    <hr>
+    <p>
+        <ul>
+            <li>Dr. Weinstein - Advisor</li>
+            <br>
+            <li>Pranav Sitaraman - President</li>
+            <li>Abhay Bhaskar - President</li>
+            <li>Thomas Catuosco - Vice President</li>
+            <li>Sanjay Ravishankar - Vice President</li>
+            <li>Atri Bhattacharjee - Secretary</li>
+            <li>Srishti Hazra - Treasurer</li>
+            <li>Harinarayan AsooriSriram - Event Director for MCASO</li>
+        </ul>
+    </p>
+
+    <!-- Start menu -->
+
+    <!-- <div id="circularMenu1" class="circular-menu circular-menu-left active">
+
+        <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+            <i class="fa fa-arrow-right"></i>
+        </a>
+
+        <menu class="items-wrapper">
+            <a href class="menu-item fa fa-home"></a>
+            <a href="https://www.hudson.k12.oh.us" class="menu-item fa fa-graduation-cap"></a>
+            <a href="/SciOly-Website-Template/contact.html" class="menu-item fa fa-envelope"></a>
+            <a href="/SciOly-Website-Template/links.html" class="menu-item fa fa-link"></a>
+        </menu>
+
+    </div> -->
+
+    <footer>
+        Template from luke2m on Github
+    </footer>
 </body>
 
 </html>
